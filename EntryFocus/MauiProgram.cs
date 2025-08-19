@@ -4,11 +4,12 @@ namespace EntryFocus
 {
     public static class MauiProgram
     {
+        public static string SamplePage= "samplePage";
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
             Routing.RegisterRoute("mainPage", typeof(MainPage));
-            Routing.RegisterRoute("samplePage", typeof(SamplePage));
+            Routing.RegisterRoute(SamplePage, typeof(SamplePage));
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
