@@ -5,10 +5,11 @@ namespace EntryFocus
     public static class MauiProgram
     {
         public static string SamplePage= "samplePage";
+        public static string MainPage= "mainPage";
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            Routing.RegisterRoute("mainPage", typeof(MainPage));
+            Routing.RegisterRoute(MainPage, typeof(MainPage));
             Routing.RegisterRoute(SamplePage, typeof(SamplePage));
             builder
                 .UseMauiApp<App>()
